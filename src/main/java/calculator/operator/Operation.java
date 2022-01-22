@@ -7,7 +7,8 @@ public enum Operation {
     ADDITION(("+"), (x, y) -> x + y),
     SUBTRACTION(("-"), (x, y) -> x - y),
     MULTIPLICATION(("*"), (x, y) -> x * y),
-    DIVIDE(("/"), (x, y) -> x / y);
+    DIVIDE(("/"), (x, y) -> x / y),
+    MODE(("%"), (x, y) -> x % y);
 
     private final String symbol;
     private final Operator operator;
