@@ -18,8 +18,10 @@ public enum Operation {
     }
 
     public static Operation getOperation(String symbol) {
-        return Arrays.stream(Operation.values()).filter(operation -> operation.symbol.equals(symbol))
-                .findFirst().orElseThrow(() -> new IllegalArgumentException("해당하는 연산자가 존재하지 않습니다."));
+        return Arrays.stream(Operation.values())
+                .filter(operation -> operation.symbol.equals(symbol))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("해당하는 연산자가 존재하지 않습니다."));
     }
 
     public int apply(int x, int y) {
